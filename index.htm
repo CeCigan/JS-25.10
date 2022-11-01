@@ -1,91 +1,66 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS</title>
+    <title>Тест самопроверки</title>
     <style>
         body{
             margin: 0 auto;
-            width: 500px;
-            background-repeat:no-repeat;
+            width: 600px;
+            padding: 5px;
+        }
+        #btn{
+            margin: 15px;
+        }
+        #input{
+            font-size: 16px;
         }
     </style>
+    <script src = "script.js"></script>
 </head>
-<body onload="window_onload(); setHrefColor();" id = "body">
-    <aside id="color" role="sidebar" class="text-center">
-        <h3 id="fh5co-logo">Задача 1</h3><br>
-    </aside>
+<body style="border: 1px solid black ;">
+    <h3 align = "center">Тест по JavaScript №1</h3>
+    <p id = "0is"><b>Сколько существует способов объявления переменных в JS?</b></p>
+    <input type = "radio" name = "issue1">2<br>
+    <input type = "radio" name = "issue2">5<br>
+    <input type = "radio" name = "issue3">0<br>
+    <p id = "1is"><b>Что такое DOM(Расшифровка аббревиатуры)?</b></p>
+    <input type = "radio" name = "issue2[]">Document Object Modul<br>
+    <input type = "radio" name = "issue2[]">Document Orentire Model<br>
+    <input type = "radio" name = "issue2[]">Document Object Model<br>
+    <p id = "2is"><b>Что такое прототип объекта?</b></p>
+    <input type = "radio" name = "issue3[]">Прототип - это JS объект, от которого другие объекты наследуют его свойства и методы<br>
+    <input type = "radio" name = "issue3[]">Прототип - свойство объекта, которое наследуется другим объектам<br>
+    <input type = "radio" name = "issue3[]">Оба варианта не верны<br>
+    <p id = "3is"><b>Какое ключевое слово позволяет создавать объекты общего вида?</b></p>
+    <input type = "radio" name = "issue4[]">new<br>
+    <input type = "radio" name = "issue4[]">object<br>
+    <input type = "radio" name = "issue4[]">let<br>
+    <p id = "4is"><b>Какой оператор служит для создания нового экземпляра из класса однотипных объектов?</b></p>
+    <input type = "radio" name = "issue5[]">new<br>
+    <input type = "radio" name = "issue5[]">var<br>
+    <input type = "radio" name = "issue5[]">_proto_<br>
+    <p id = "5is"><b>Объекты, отвечающие за то, что содержится на Web-странице в окне браузера, называются?</b></p>
+    <input type = "radio" name = "issue6[]">Селкторы<br>
+    <input type = "radio" name = "issue6[]">Атрибуты<br>
+    <input type = "radio" name = "issue6[]">Свойства<br>
+    <p id = "6is"><b>Можно ли в скрипте перевести посетителя на другую страницу сайта?</b></p>
+    <input type = "radio" name = "issue7[]"><br>
+    <input type = "radio" name = "issue7[]"><br>
+    <input type = "radio" name = "issue7[]"><br>
+    <p id = "7is"><b>Какая функция позволяет очищать конечную анимацию?</b></p>
+    <input type = "radio" name = "issue8[]"><br>
+    <input type = "radio" name = "issue8[]"><br>
+    <input type = "radio" name = "issue8[]"><br>
+    <p id = "8is"><b>issue9</b></p>
+    <input type = "radio" name = "issue9[]"><br>
+    <input type = "radio" name = "issue9[]"><br>
+    <input type = "radio" name = "issue9[]"><br>
 
-    <h3 id = "">Задача 2</h3>
-    <img src = "pictures/1.jpg" width="100px" height="100px" align = "left" id = "pic1"><p onmouseover="setAlign();">Изменение фона страницы. Написать сценарий, который позволит при загрузке страницы изменять фон автоматически три раза, с задержкой в 1 сек. <br>
-    Изменение позиционирования изображения. Написать сценарий, во время работы которого при наведении курсора мыши на пункт меню, обтекание изображения текстом left меняется на right.</p>
-    <br>
+    <input type = "submit" value = "Выполнить" onclick = "" id = "btn">
+    <input type = "reset" value = "Очистить" id = "btn">
 
-    <h3 id = "">Задача 3</h3><br>
-    <input type = "file" id = "fileBack"> <input type = "submit" value = "Изменить" onclick="setImage()">
-
-    <h3 id = "">Задача 4</h3>
-    <a href = "#" id = "ref">Ссылка №1</a>  <br>
-
-    <h3 id = "">Задача 6</h3>
-    <div id="myDiv" style="position:relative;border:1px #000 solid; width:500px;height:500px">
-        <img style="position:relative;" id="myimg" src="pictures/2.jpg" width="10px" height="10px"/>
-    </div><br>
-
-    <script>
-        function window_onload() {
-            var color = document.getElementById('color');
-            var url = 0;
-            let colors = ["red", "blue", "aqua"];
-            setInterval(function() {
-                url += 1;
-                if (url == colors.length) {
-                    url = 0;
-                }
-                color.style.backgroundColor = colors[url];
-            }, 1000);
-        }
-
-        function setAlign(){
-            let pic = document.getElementById("pic1");
-            let count = 0;
-            pic.outerHTML = '<img src = "pictures/1.jpg" width="100px" height="100px" align = "right" id = "pic1">'
-            count++; if(count % 2 == 0){ pic.outerHTML = '<img src = "pictures/1.jpg" width="100px" height="100px" align = "left" id = "pic1">'}
-        }
-
-        function setImage(){
-            let paddingLeft = 0;
-            let kadr = document.getElementById('body');
-            kadr.style.backgroundImage = 'url("pictures/2.jpg")';
-            setInterval(function(){
-                kadr.style.backgroundPositionX = paddingLeft + "px";
-                kadr.style.backgroundPositionY = paddingLeft + "px";
-                paddingLeft++;
-            }, 300);
-        }
-
-        //Задача 4
-        function setHrefColor(){
-            var refs = document.getElementById("ref");
-            var color = 0;
-            setInterval(function () {
-                color = color + 1 % 360;
-                refs.style.color = "hsl(" + color + ", 100%, 50%)";
-            }, 10);
-        }
-
-            let div2 = document.getElementById("myDiv")
-            div2.onmousemove = function(e){
-            img3 = document.getElementById("myimg");
-            if(e.clientY+img3.clientHeight <= div2.offsetTop+div2.clientHeight){
-                img3.style.top = e.clientY - 550 +"px";
-            }
-            if(e.clientX+img3.clientWidth <= div2.offsetLeft+div2.clientWidth){
-                img3.style.left = e.clientX - 625 +"px";
-            }
-        }
-    </script>
 </body>
 </html>
