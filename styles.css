@@ -1,0 +1,29 @@
+body{
+    margin: 0 auto;
+    width: 700px;
+}
+#zd1{
+    width: 200px;
+    height: 200px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+#elem {
+    border: 1px solid violet;
+    width: 200px;
+    height: 200px;
+}
+#squareMove{
+    width: 50px;
+    height: 50px;
+    background: red;
+    top: 30px;
+    position: absolute;
+    border: 1px solid wheat;
+}
+#zd5, #zd6{
+    border: 1px solid rgb(24, 93, 221);
+    width: 200px;
+    height: 200px;
+}
